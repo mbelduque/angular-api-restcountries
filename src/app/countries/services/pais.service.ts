@@ -24,4 +24,9 @@ export class PaisService {
     return this.httpClient.get<Pais[]>(url);
   }
 
+  buscarPaisAlpha(alpha: string): Observable<Pais> {
+    const url = `${this.ENDPOINT_URL}/alpha/${alpha}`;
+    return this.httpClient.get<Pais>(url);
+  }
+
 }
