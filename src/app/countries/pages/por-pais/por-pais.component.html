@@ -4,17 +4,15 @@
   <div class="col">
     <app-pais-input
       (onEnter)="buscar($event)"
-      (onDebounce)="sugerencias($event)">
+      (onDebounce)="sugerencias($event)"
+      placeholder="Buscar país...">
     </app-pais-input>
   </div>
 </div>
 <hr>
 <div class="alert alert-danger" *ngIf="hayError">
-  No se encontró ningún país con el término {{termino}}
+  No se encontró ningún país con el término {{pais}}
 </div>
-<!--<div class="alert warning alert-warning" *ngIf="!termino && hayError">-->
-<!--  Debe ingresar un país para buscar-->
-<!--</div>-->
 <div class="row" *ngIf="paises.length > 0">
   <div class="col">
     <app-tabla-paises
