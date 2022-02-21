@@ -10,10 +10,10 @@
   </div>
 </div>
 <hr>
-<div class="alert alert-danger" *ngIf="hayError">
+<div class="alert alert-danger mt-1" *ngIf="hayError">
   No se encontró ningún país con el término {{pais}}
 </div>
-<div class="row" *ngIf="paises.length > 0">
+<div class="row mt-3" *ngIf="paises.length > 0">
   <div class="col">
     <app-tabla-paises
       [paises]="paises">
