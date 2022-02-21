@@ -8,7 +8,7 @@ export interface Pais {
   independent: boolean;
   status: string;
   unMember: boolean;
-  currencies: Currencies;
+  currencies: { [key: string]: Currencies };
   idd: Idd;
   capital: string[];
   altSpellings: string[];
@@ -50,10 +50,6 @@ export interface CoatOfArms {
 }
 
 export interface Currencies {
-  COP: Cop;
-}
-
-export interface Cop {
   name: string;
   symbol: string;
 }

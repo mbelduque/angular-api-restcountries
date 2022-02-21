@@ -5,18 +5,20 @@
     <th scope="col">#</th>
     <th scope="col">Bandera</th>
     <th scope="col">Nombre</th>
+    <th scope="col">Capital</th>
     <th scope="col">Población</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let pais of paises; let i = index">
-    <td>{{i + 1}}</td>
-    <td>
-      <img class="small-flag" [src]="pais.flags.svg" alt="bandera">
+    <td class="p-3">{{i + 1}}</td>
+    <td class="p-3">
+      <img class="small-flag shadow-lg" [src]="pais.flags.svg" alt="bandera">
     </td>
-    <td>{{pais.capital}}, {{pais.name.official}}</td>
-    <td>{{pais.population | number}}</td>
-    <td>
+    <td class="p-3">{{pais.name.official}}</td>
+    <td class="p-3">{{pais.capital}}</td>
+    <td class="p-3">{{pais.population | number}}</td>
+    <td class="p-3">
       <a [routerLink]="['/pais', pais.cca2]">Ver...</a>
     </td>
   </tr>

@@ -8,18 +8,66 @@
     </div>
   </div>
   <hr>
-  <div class="row">
+  <div class="row mt-4 mb-4">
     <div class="col-3">
       <h3>Bandera</h3>
-      <img class="medium-flag" [src]="pais.flags.svg" alt="">
+      <img class="medium-flag shadow-lg" [src]="pais.flags.svg" alt="">
+      <div class="col-3 mt-3">
+        <h3>Escudo</h3>
+        <img class="small-flag" [src]="pais.coatOfArms.svg" alt="">
+      </div>
     </div>
-    <div class="col-3">
+    <div class="col ms-3">
       <h3>Información</h3>
       <ul class="list-group">
         <li class="list-group-item">
           <strong>Población:</strong> {{pais.population | number}}
         </li>
+        <li class="list-group-item">
+          <strong>Código alpha:</strong> {{pais.cca2}}
+        </li>
+        <li class="list-group-item">
+          <strong>Código num:</strong> {{pais.ccn3 | number}}
+        </li>
+        <li class="list-group-item">
+          <strong>Capital:</strong> {{pais.capital}}
+        </li>
+        <li class="list-group-item">
+          <strong>Región:</strong> {{pais.region}}
+        </li>
+        <li class="list-group-item">
+          <strong>Subregión:</strong> {{pais.subregion}}
+        </li>
+        <li class="list-group-item">
+          <strong>Área:</strong> {{pais.area | number}}
+        </li>
       </ul>
+    </div>
+  </div>
+  <hr>
+  <div class="row mt-4 mb-4">
+    <div class="col-12">
+      <h3>Traducciones</h3>
+      <span class="badge bg-primary me-1 mb-2">{{pais.translations.ara.common}}</span>
+      <span class="badge bg-primary me-1 mb-2">{{pais.translations.ces.common}}</span>
+      <span class="badge bg-primary me-1 mb-2">{{pais.translations.cym.common}}</span>
+      <span class="badge bg-primary me-1 mb-2">{{pais.translations.deu.common}}</span>
+      <span class="badge bg-primary me-1 mb-2">{{pais.translations.est.common}}</span>
+      <span class="badge bg-primary me-1 mb-2">{{pais.translations.fin.common}}</span>
+      <span class="badge bg-primary me-1 mb-2">{{pais.translations.fra.common}}</span>
+      <span class="badge bg-primary me-1 mb-2">{{pais.translations.hrv.common}}</span>
+      <span class="badge bg-primary me-1 mb-2">{{pais.translations.hun.common}}</span>
+      <span class="badge bg-primary me-1 mb-2">{{pais.translations.ita.common}}</span>
+      <span class="badge bg-primary me-1 mb-2">{{pais.translations.jpn.common}}</span>
+      <span class="badge bg-primary me-1 mb-2">{{pais.translations.kor.common}}</span>
+      <span class="badge bg-primary me-1 mb-2">{{pais.translations.nld.common}}</span>
+      <span class="badge bg-primary me-1 mb-2">{{pais.translations.per.common}}</span>
+      <span class="badge bg-primary me-1 mb-2">{{pais.translations.pol.common}}</span>
+      <span class="badge bg-primary me-1 mb-2">{{pais.translations.rus.common}}</span>
+      <span class="badge bg-primary me-1 mb-2">{{pais.translations.slk.common}}</span>
+      <span class="badge bg-primary me-1 mb-2">{{pais.translations.spa.common}}</span>
+      <span class="badge bg-primary me-1 mb-2">{{pais.translations.swe.common}}</span>
+      <span class="badge bg-primary me-1 mb-2">{{pais.translations.urd.common}}</span>
     </div>
   </div>
 </ng-template>
