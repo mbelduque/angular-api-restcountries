@@ -25,7 +25,7 @@ export class PaisInputComponent implements OnInit {
   ngOnInit() {
     this.debouncer
       .pipe(
-        debounceTime(300)
+        debounceTime(0)
       )
       .subscribe(termino => {
         this.onEnter.emit(termino)
