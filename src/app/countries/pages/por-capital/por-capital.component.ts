@@ -14,6 +14,9 @@ export class PorCapitalComponent {
   hayError: boolean = false;
   paises: Pais[] = [];
 
+  capitalesSugeridas: Pais[] = [];
+  mostrarSugerencias: boolean = false;
+
   constructor(private paisService: PaisService) {
   }
 
@@ -26,6 +29,21 @@ export class PorCapitalComponent {
       this.hayError = true;
       this.paises = [];
     }));
+  }
+
+  sugerencias(capital: string) {
+    this.hayError = false;
+    this.mostrarSugerencias = true;
+    this.capital = capital;
+    this.paisService.buscarCapital(capital).subscribe(capitales => {
+      this.capitalesSugeridas = capitales.splice(0, 5)
+    }, () => {
+      this.capitalesSugeridas = []
+    })
+  }
+
+  buscarSugerido(capital: string) {
+    this.buscar(capital);
   }
 
 }
