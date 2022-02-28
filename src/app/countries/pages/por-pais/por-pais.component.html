@@ -18,6 +18,7 @@
         *ngFor="let pais of paisesSugeridos">
       <a class="nav-link"
          [routerLink]="['/pais', pais.cca2]">
+        <img src="assets/icons/search_icon.svg" alt="">
         {{pais.name.official}}
       </a>
     </li>

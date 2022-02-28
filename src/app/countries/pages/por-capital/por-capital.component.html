@@ -18,6 +18,7 @@
         *ngFor="let capital of capitalesSugeridas">
       <a class="nav-link"
          [routerLink]="['/pais', capital.cca2]">
+        <img src="assets/icons/search_icon.svg" alt="">
         {{capital.capital}}
       </a>
     </li>
